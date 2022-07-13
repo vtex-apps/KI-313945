@@ -15,5 +15,8 @@ Thanks goes to these wonderful people:
 <table>
   <tr>
     <td align="center"><a href="https://github.com/germanBonacchi"><img src="https://avatars.githubusercontent.com/u/55905671?v=4" width="100px;" alt=""/><br /><sub><b>Germán Bonacchi</b></sub></a><br /><a href="https://github.com/vtex-apps/KI-313945/commits?author=germanBonacchi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/choque9"><img src="https://avatars.githubusercontent.com/u/74924748?v=4" width="100px;" alt=""/><br /><sub><b>William Choque Valderrama</b></sub></a><br /><a href="https://github.com/vtex-apps/KI-313945/commits?author=choque9" title="Code">💻</a></td>
 </tr>
 </table>
+
+
