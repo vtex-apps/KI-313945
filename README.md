@@ -1,9 +1,9 @@
 # [KI-313945] Purchase can't be finished and returns the error "receiver name field is invalid"
-This script solves the KI https://vtexhelp.zendesk.com/agent/tickets/313945
+
+This script not solve the KI https://vtexhelp.zendesk.com/agent/tickets/313945 but ensure to have info in the receiverName at the orderForm.
 
 You need to add the script to the checkout at the `checkout6-custom.js`.
 
-This script not solve the KI but ensure to have info in the receiverName.
 
 ## Contributors ✨
 
