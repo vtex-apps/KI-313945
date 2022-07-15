@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  window.addEventListener("hashchange", () => {
+    hashchange();
+  });
   let listenerCreated = false;
   const observerReceiverName = new MutationObserver((mutations, obsP) => {
     const receiverName = document.querySelector(".ship-receiverName");
@@ -36,4 +39,24 @@ function createListener(listenerFlag) {
         });
       });
   }
+}
+
+function hashchange() {
+  vtexjs.checkout.getOrderForm().then(function (orderForm) {
+    var shippingData = orderForm.shippingData;
+    if (
+      shippingData.selectedAddresses &&
+      shippingData.selectedAddresses.length > 0
+    ) {
+      if (!shippingData.selectedAddresses[0].receiverName) {
+        //console.log("receiverName is empty");
+        const clientProfileData = orderForm.clientProfileData
+        const { firstName, lastName } = clientProfileData
+        shippingData.selectedAddresses[0].receiverName = `${firstName} ${lastName}`
+        return vtexjs.checkout.sendAttachment("shippingData", shippingData);
+      }/*{
+        console.log("receiverName is not empty");
+      }*/
+    }
+  });
 }
