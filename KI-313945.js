@@ -52,7 +52,11 @@ function hashchange() {
         //console.log("receiverName is empty");
         const clientProfileData = orderForm.clientProfileData
         const { firstName, lastName } = clientProfileData
-        shippingData.selectedAddresses[0].receiverName = `${firstName} ${lastName}`
+        let name = `${firstName} ${lastName}`
+        if (name.includes("*")) {
+          name = name.replaceAll("*", "")
+        }
+        shippingData.selectedAddresses[0].receiverName = name
         return vtexjs.checkout.sendAttachment("shippingData", shippingData);
       }/*{
         console.log("receiverName is not empty");
